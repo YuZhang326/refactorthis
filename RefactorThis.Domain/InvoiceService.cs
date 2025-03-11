@@ -19,7 +19,7 @@ namespace RefactorThis.Domain
 			var inv = _invoiceRepository.GetInvoice(payment.Reference);
 			if (inv == null)
 			{
-				throw new InvalidOperationException("Invoice not found");
+				throw new InvalidOperationException("There is no invoice matching this payment");
 			}
 
 			// let the invoice handle how the payment is alllied
